@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.node",
   "scripts": {
+    "start": "npm run start:js && npm run start:rs ",
+    "start:js": "time node taraiJs.js",
+    "start:rs": "time node taraiRs.js",
     "build": "cargo-cp-artifact -nc index.node -- cargo build --message-format=json-render-diagnostics",
     "build-debug": "npm run build --",
     "build-release": "npm run build -- --release",
